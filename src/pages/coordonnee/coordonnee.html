@@ -1,0 +1,46 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Coordonnées</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid *ngIf="personneSelectionnee">
+    <ion-row>
+      <ion-col width-50 offset-25>
+          <div text-center>
+              <img width="120" height="120" src="assets/imgs/user.svg" alt="">
+          </div>
+          <h1 text-center>{{personneSelectionnee.nom}} {{personneSelectionnee.prenom}}</h1>
+          <h2 text-center>{{personneSelectionnee.titre}}</h2>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div>
+    <ion-list>
+        <ion-item>
+          <ion-icon name="home" item-start></ion-icon>
+          <h2>{{personneSelectionnee.ecole}}</h2>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="school" item-start></ion-icon>  
+          <h2>{{personneSelectionnee.filiere}}</h2>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="call" item-start></ion-icon>
+          <h2>{{personneSelectionnee.telephone}}</h2>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="mail" item-start></ion-icon>
+            <h2>{{personneSelectionnee.email}}</h2>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="pin" item-start></ion-icon>
+            <h2>{{personneSelectionnee.lieu}}</h2>
+        </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
